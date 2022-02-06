@@ -1,7 +1,7 @@
 class Rechtsgrundlagen {
   static const String themengebiet = "Rechtsgrundlagen";
 
-  static final _fragenRechtsgrundlagen = [
+  static final fragenRechtsgrundlagen = [
     {
       'questionText':
           'Mit welchem Gesetz wird das Feuerwehrwesen in Bayern geregelt?',

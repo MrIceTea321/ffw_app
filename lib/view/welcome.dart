@@ -15,8 +15,9 @@ class _WelcomeState extends State<Welcome> {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
-    return Scaffold(
-      body: Container(
+    return Material(
+      color: lightBlue,
+      child: Container(
           height: size.height,
           width: size.width,
           decoration:shaderDecoration,
@@ -29,10 +30,11 @@ class _WelcomeState extends State<Welcome> {
                 child: Image.asset('images/ffwlogo.png'),
               ),
               Text('Wähle aus was du üben möchtest:',
+                  textAlign: TextAlign.center,
                   style: TextStyle(
                       fontSize: size.height * 0.035,
                       color: white,
-                      fontWeight: FontWeight.bold)),
+                  )),
               StandardButton(
                   color: buttonColor,
                   text: 'Truppausbildung',

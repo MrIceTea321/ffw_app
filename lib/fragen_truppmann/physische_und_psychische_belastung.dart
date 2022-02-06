@@ -1,7 +1,7 @@
 class Physische_PsychischeBelastung {
   static const String themengebiet = "Physische- und Psychische Belastung";
 
-  static final _fragenPhysische_PsychischeBelastung = [
+  static final fragenPhysische_PsychischeBelastung = [
     {
       'questionText':
           'Welches Verhalten kann bei der Stressbewältigung hilfreich sein?',

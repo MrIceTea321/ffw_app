@@ -1,4 +1,4 @@
-class _Fahrzeugkunde {
+class Fahrzeugkunde {
   static const String themengebiet = "Fahrzeugkunde";
 
   static final fragenFahrzeugkunde = [

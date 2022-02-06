@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
           GlobalCupertinoLocalizations.delegate,
         ],
         supportedLocales: const [Locale('de')],
-        home: const ModulareTruppAusbildung(),
+        home: const Welcome(),
       ),
     );
   }

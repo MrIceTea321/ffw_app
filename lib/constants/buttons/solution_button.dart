@@ -8,9 +8,9 @@ class StandardButton extends StatelessWidget {
 
   const StandardButton(
       {Key? key,
-      required this.color,
-      required this.text,
-      required this.onPressed})
+        required this.color,
+        required this.text,
+        required this.onPressed})
       : super(key: key);
 
   @override
