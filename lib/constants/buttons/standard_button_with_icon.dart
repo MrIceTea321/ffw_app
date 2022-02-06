@@ -11,14 +11,14 @@ class StandardButtonWithIcon extends StatelessWidget {
 
   final Color color;
   final String text;
-  final Function onPressed;
+  final Function() onPressed;
   final Icon icon;
 
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return TextButton(
-      onPressed: onPressed(),
+      onPressed: onPressed,
       child: Container(
           height: 50,
           width: size.width * 0.9,

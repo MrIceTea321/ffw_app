@@ -1,3 +1,4 @@
+import 'package:ffw_app/view/modulare_truppausbildung.dart';
 import 'package:ffw_app/view/welcome.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -8,11 +9,10 @@ import 'constants/custom_widgets/dismiss_keyboard_widget.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
-
   @override
   Widget build(BuildContext context) {
     SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersive);
-    return  DismissKeyboard(
+    return DismissKeyboard(
       child: MaterialApp(
         theme: ThemeData(
           fontFamily: 'Open Sans',
@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
           GlobalCupertinoLocalizations.delegate,
         ],
         supportedLocales: const [Locale('de')],
-        home: const Welcome(),
+        home: const ModulareTruppAusbildung(),
       ),
     );
   }

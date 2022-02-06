@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class StandardButton extends StatelessWidget {
   final Color color;
   final String text;
-  final Function onPressed;
+  final Function() onPressed;
 
   const StandardButton(
       {Key? key,
@@ -16,9 +16,9 @@ class StandardButton extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return TextButton(
-      onPressed: onPressed(),
+      onPressed: onPressed,
       child: Container(
-          height: size.height * 0.09 ,
+          height: size.height * 0.08 ,
           width: size.width * 0.5,
           decoration: BoxDecoration(
             borderRadius: const BorderRadius.all(Radius.circular(32.0)),
@@ -30,7 +30,7 @@ class StandardButton extends StatelessWidget {
               child: Text(
                 text,
                 style:  TextStyle(
-                  fontSize: size.height * 0.02,
+                  fontSize: size.height * 0.021,
                   color: Colors.black,
                   fontWeight: FontWeight.bold,
                 ),
