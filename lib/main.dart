@@ -6,9 +6,13 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'constants/custom_widgets/dismiss_keyboard_widget.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+//TODO remove app bar from notch
+  //TODO create solutions site
+  //TODO show answers on the same site maybe?
   @override
   Widget build(BuildContext context) {
     SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersive);
