@@ -1,3 +1,5 @@
+import 'package:ffw_app/constants/buttons/standard_button.dart';
+import 'package:ffw_app/constants/colors.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -15,20 +17,29 @@ class _WelcomeState extends State<Welcome> {
         .of(context)
         .size;
     return Scaffold(
-        backgroundColor: Colors.white54,
-        body: Column(
+      body: Container(
+        height: size.height,
+        width: size.width,
+        decoration: const BoxDecoration(
+            gradient: LinearGradient(
+                begin: Alignment.topLeft,
+                end: Alignment.bottomRight,
+                colors: [darkBlue, lightBlue, darkBlue])),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            const Text('Freiwillige Feuerwehr Sommerach',
-                style: TextStyle(fontSize: 18.0, color: Colors.red)),
-            Expanded(
-              child: SafeArea(
-                child: SizedBox(
-                  height: 200.0,
-                  child: Image.asset('images/ffwlogo.png'),
-                ),
-              ),
-            ),
-          ],
-        ));
+        SizedBox(
+        height: size.height * 0.35,
+          child: Image.asset('images/ffwlogo.png'),
+        ),
+         Text('Wähle aus was du üben möchtest:', style: TextStyle(
+             fontSize: size.height * 0.035, color: red, fontWeight: FontWeight.bold)),
+            StandardButton(color: red, text: 'modulare Truppmannausbildung', onPressed: (){
+
+            })
+        ],
+      )),
+    );
   }
 }
