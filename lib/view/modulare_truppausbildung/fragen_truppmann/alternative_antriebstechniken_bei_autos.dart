@@ -1,5 +1,5 @@
 
-class FragenAlternativeAntriebstechnikenBeiAutos {
+class AlternativeAntriebstechnikenBeiAutos {
   static const String themengebiet = "Alternative Antriebstechniken\nbei Autos";
 
   static final List<Map<String, Object>>

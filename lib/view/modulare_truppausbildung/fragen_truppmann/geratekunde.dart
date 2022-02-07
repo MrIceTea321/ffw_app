@@ -6,9 +6,9 @@ class Geraetekunde{
 
 
 
-  String themengebiet="Gerätekunde";
+  static const String themengebiet="Gerätekunde";
 
-  final fragenGeraetekunde = [
+  static final fragenGeraetekunde = [
     {
       'questionText': ' Welche ergänzende Schutzausrüstung kann der Einheitsführer bei Einsätzen mit gefährlichen Stoffen anordnen?',
       'answers': [
