@@ -11,3 +11,11 @@ const shaderDecoration = BoxDecoration(
         begin: Alignment.topLeft,
         end: Alignment.bottomRight,
         colors: [lightBlue, darkBlue, darkBlue]));
+const cornerDecoration = BoxDecoration(
+  borderRadius: BorderRadius.only(
+    bottomRight: Radius.circular(200.0),
+  ),
+    gradient: LinearGradient(
+        begin: Alignment.topLeft,
+        end: Alignment.bottomRight,
+        colors: [lightBlue, darkBlue, darkBlue]));

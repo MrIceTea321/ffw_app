@@ -30,21 +30,26 @@ class _QuizState extends State<Quiz> {
         decoration: shaderDecoration,
         child: questionIndex < widget.questions.length
             ? Scaffold(
+                backgroundColor: Colors.transparent,
                 body: !showAnswer
                     // question container
                     ? Container(
-                        decoration: shaderDecoration,
+                        decoration: cornerDecoration,
                         child: Column(children: [
                           Row(
                             children: <Widget>[
                               Expanded(
                                 child: Container(
                                   decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.only(
+                                        bottomRight:
+                                            Radius.circular(size.height * 0.25),
+                                      ),
                                       gradient: LinearGradient(
                                           begin: Alignment.topLeft,
                                           end: Alignment.bottomRight,
                                           colors: [peach, lightPeach, white])),
-                                  height: size.height * 0.3,
+                                  height: size.height * 0.4,
                                   width: size.width * 0.9,
                                   child: Padding(
                                     padding: const EdgeInsets.symmetric(
@@ -102,18 +107,22 @@ class _QuizState extends State<Quiz> {
                       )
                     // answer container
                     : Container(
-                        decoration: shaderDecoration,
+                        decoration: cornerDecoration,
                         child: Column(children: [
                           Row(
                             children: <Widget>[
                               Expanded(
                                 child: Container(
                                   decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.only(
+                                        bottomRight:
+                                        Radius.circular(size.height * 0.25),
+                                      ),
                                       gradient: LinearGradient(
                                           begin: Alignment.topLeft,
                                           end: Alignment.bottomRight,
                                           colors: [peach, lightPeach, white])),
-                                  height: size.height * 0.3,
+                                  height: size.height * 0.4,
                                   width: size.width * 0.9,
                                   child: Padding(
                                     padding: const EdgeInsets.symmetric(
@@ -175,7 +184,7 @@ class _QuizState extends State<Quiz> {
                                 });
                               }),
                           SizedBox(
-                            height: size.height * 0.015,
+                            height: size.height * 0.025,
                           ),
                         ]),
                       ))
