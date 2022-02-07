@@ -28,7 +28,7 @@ class StandardButton extends StatelessWidget {
             border: Border.all(color: darkBlue, width: 2.0),
           ),
           child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 10),
+            padding: const EdgeInsets.symmetric(horizontal: 3.0, vertical: 5.0),
             child: Center(
               child: AutoSizeText(
                 text,

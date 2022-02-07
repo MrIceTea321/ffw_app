@@ -56,7 +56,7 @@ class _WelcomeState extends State<Welcome> {
                                   context,
                                   MaterialPageRoute(
                                       builder: (_) =>
-                                          const ModulareTruppAusbildung()));
+                                           ModulareTruppAusbildung()));
                             });
                       },
                     );

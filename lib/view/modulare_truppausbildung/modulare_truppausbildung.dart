@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:ffw_app/constants/buttons/standard_button.dart';
 import 'package:ffw_app/constants/colors.dart';
 import 'package:ffw_app/view/modulare_truppausbildung/quiz.dart';
@@ -20,13 +22,27 @@ import 'fragen_truppmann/technische_hilfeleistung.dart';
 import 'fragen_truppmann/rettung_von_personen.dart';
 
 class ModulareTruppAusbildung extends StatefulWidget {
-  const ModulareTruppAusbildung({Key? key}) : super(key: key);
+  ModulareTruppAusbildung({Key? key}) : super(key: key);
+  List<Map<String, Object>> examQuestions = [];
 
   @override
   _ModulareTruppAusbildung createState() => _ModulareTruppAusbildung();
 }
 
 class _ModulareTruppAusbildung extends State<ModulareTruppAusbildung> {
+
+  @override
+  void initState() {
+    widget.examQuestions.addAll(getExamQuestions());
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+    widget.examQuestions.clear();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -59,13 +75,28 @@ class _ModulareTruppAusbildung extends State<ModulareTruppAusbildung> {
               height: size.height * 0.03,
             ),
             StandardButton(
-                text: 'Alle Fragen',
+                text: '🚒 Prüfungsmodus 🚒',
                 color: buttonColor,
                 onPressed: () {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
                           builder: (_) => Quiz(
+                                questions: widget.examQuestions,
+                                themengebiet: AlleFragen.themengebiet,
+                              )));
+                }),
+            SizedBox(
+              height: size.height * 0.02,
+            ),
+            StandardButton(
+                text: 'Alle Fragen',
+                color: buttonColor,
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (_) => const Quiz(
                                 questions: AlleFragen.fragenPruefungsmodus,
                                 themengebiet: AlleFragen.themengebiet,
                               )));
@@ -304,5 +335,15 @@ class _ModulareTruppAusbildung extends State<ModulareTruppAusbildung> {
         ),
       ),
     );
+  }
+
+  List<Map<String, Object>> getExamQuestions() {
+    List<Map<String, Object>> examQuestionsList = [];
+    for (int i = 0; i < 35; i++) {
+      int random = Random().nextInt(217);
+      examQuestionsList.insert(
+          i, AlleFragen.fragenPruefungsmodus.elementAt(random));
+    }
+    return examQuestionsList;
   }
 }

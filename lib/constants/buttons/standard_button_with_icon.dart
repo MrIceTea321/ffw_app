@@ -27,7 +27,7 @@ class StandardButtonWithIcon extends StatelessWidget {
             color: color,
           ),
           child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 10),
+            padding: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 10),
             child: Center(
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,

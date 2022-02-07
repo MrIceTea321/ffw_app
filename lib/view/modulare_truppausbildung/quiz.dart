@@ -268,7 +268,7 @@ class _QuizState extends State<Quiz> {
                               context,
                               MaterialPageRoute(
                                   builder: (_) =>
-                                      const ModulareTruppAusbildung()));
+                                       ModulareTruppAusbildung()));
                         }),
                   ],
                 ),

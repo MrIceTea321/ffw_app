@@ -3,7 +3,7 @@ class Funk {
 
   static final fragenFunk = [
     {
-      'questionText': 'Wofür werden Handfunkgeräte in der Regelverwendet?',
+      'questionText': 'Wofür werden Handfunkgeräte in der Regel verwendet?',
       'answers': [
         {'text': 'Funkverbindung von Feststation zu Fahrzeug', 'score': 0},
         {

@@ -36,9 +36,8 @@ class AnswerButton extends StatelessWidget {
                 stepGranularity: 4.0,
                 maxFontSize: 36,
                 textAlign: TextAlign.center,
-                maxLines: 2,
-                style: TextStyle(
-                  fontSize: size.height * 0.025,
+                maxLines: 3,
+                style: const TextStyle(
                   color: Colors.black,
                 ),
               ),
