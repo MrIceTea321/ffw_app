@@ -35,7 +35,6 @@ class StandardButton extends StatelessWidget {
                 style: TextStyle(
                   fontSize: size.height * 0.03,
                   color: Colors.black,
-                  fontWeight: FontWeight.bold,
                 ),
                 maxLines: 2,
               ),

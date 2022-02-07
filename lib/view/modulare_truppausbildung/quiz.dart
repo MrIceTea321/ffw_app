@@ -203,11 +203,10 @@ class _QuizState extends State<Quiz> {
                                             boxShadow: [
                                               answerHelper ==
                                                       answers.values.toString()
-                                                  ? BoxShadow(
-                                                      color: Colors.black
-                                                          .withOpacity(0.5),
-                                                      spreadRadius: 5,
-                                                      blurRadius: 7,
+                                                  ?  BoxShadow(
+                                                      color: lightPeach,
+                                                      spreadRadius: 10,
+                                                      blurRadius: 0,
                                                       offset: const Offset(0,
                                                           3), // changes position of shadow
                                                     )
