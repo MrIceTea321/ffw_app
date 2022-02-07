@@ -26,18 +26,15 @@ class StandardButton extends StatelessWidget {
             color: color,
             border: Border.all(color: darkBlue, width: 2.0),
           ),
-          child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 10),
-            child: Center(
-              child: Text(
-                text,
-                style:  TextStyle(
-                  fontSize: size.height * 0.021,
-                  color: Colors.black,
-                  fontWeight: FontWeight.bold,
-                ),
-                maxLines: 1,
+          child: Center(
+            child: Text(
+              text,
+              style:  TextStyle(
+                fontSize: size.height * 0.021,
+                color: Colors.black,
+                fontWeight: FontWeight.bold,
               ),
+              maxLines: 1,
             ),
           )),
     );

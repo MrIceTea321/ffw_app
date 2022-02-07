@@ -2,12 +2,12 @@ import 'package:auto_size_text/auto_size_text.dart';
 import 'package:ffw_app/constants/colors.dart';
 import 'package:flutter/material.dart';
 
-class StandardButton extends StatelessWidget {
+class AnswerButton extends StatelessWidget {
   final Color color;
   final String text;
   final Function() onPressed;
 
-  const StandardButton(
+  const AnswerButton(
       {Key? key,
       required this.color,
       required this.text,
@@ -20,7 +20,7 @@ class StandardButton extends StatelessWidget {
     return TextButton(
       onPressed: onPressed,
       child: Container(
-          height: size.height * 0.1,
+          height: size.height * 0.15,
           width: size.width * 0.9,
           decoration: BoxDecoration(
             borderRadius: const BorderRadius.all(Radius.circular(32.0)),
@@ -28,16 +28,19 @@ class StandardButton extends StatelessWidget {
             border: Border.all(color: darkBlue, width: 2.0),
           ),
           child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 10),
+            padding: const EdgeInsets.symmetric(horizontal: 3.0, vertical: 5.0),
             child: Center(
               child: AutoSizeText(
                 text,
-                style: TextStyle(
-                  fontSize: size.height * 0.03,
-                  color: Colors.black,
-                  fontWeight: FontWeight.bold,
-                ),
+                minFontSize: 16,
+                stepGranularity: 4.0,
+                maxFontSize: 36,
+                textAlign: TextAlign.center,
                 maxLines: 2,
+                style: TextStyle(
+                  fontSize: size.height * 0.025,
+                  color: Colors.black,
+                ),
               ),
             ),
           )),

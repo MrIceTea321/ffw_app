@@ -49,7 +49,7 @@ class _ModulareTruppAusbildung extends State<ModulareTruppAusbildung> {
             SizedBox(
               height: size.height * 0.03,
             ),
-            Text('Wähle aus welches Themengebiet du üben möchtest:',
+            Text('Wähle ein Themengebiet aus 🔎',
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontSize: size.height * 0.03,
