@@ -20,23 +20,23 @@ class AnswerButton extends StatelessWidget {
     return TextButton(
       onPressed: onPressed,
       child: Container(
-          height: size.height * 0.15,
+          height: size.height * 0.18,
           width: size.width * 0.9,
           decoration: BoxDecoration(
             borderRadius: const BorderRadius.all(Radius.circular(32.0)),
             color: color,
             border: Border.all(color: darkBlue, width: 2.0),
           ),
-          child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 3.0, vertical: 5.0),
-            child: Center(
+          child: Center(
+            child: Padding(
+              padding: const EdgeInsets.fromLTRB(3.0,2.0,3.0,0.0),
               child: AutoSizeText(
                 text,
-                minFontSize: 16,
-                stepGranularity: 4.0,
+                minFontSize: 14,
+                stepGranularity: 2.0,
                 maxFontSize: 36,
                 textAlign: TextAlign.center,
-                maxLines: 3,
+                maxLines: 4,
                 style: const TextStyle(
                   color: Colors.black,
                 ),

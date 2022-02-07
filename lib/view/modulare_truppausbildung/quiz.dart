@@ -21,6 +21,7 @@ class _QuizState extends State<Quiz> {
   int totalScore = 0;
   bool showAnswer = false;
   List<bool> isPressedList = List.filled(3, false);
+  String answerHelper = '';
 
   @override
   Widget build(BuildContext context) {
@@ -108,6 +109,8 @@ class _QuizState extends State<Quiz> {
                                                   showAnswer = true;
                                                 });
 
+                                                answerHelper =
+                                                    answers.values.toString();
                                               },
                                               color: lightBlue,
                                               text: answers['text'].toString()),
@@ -178,6 +181,7 @@ class _QuizState extends State<Quiz> {
                                   onPressed: () {
                                     setState(() {
                                       showAnswer = false;
+                                      answerHelper = '';
                                     });
                                   }),
                               SizedBox(
@@ -196,6 +200,21 @@ class _QuizState extends State<Quiz> {
                                           decoration: BoxDecoration(
                                             borderRadius:
                                                 BorderRadius.circular(7.0),
+                                            boxShadow: [
+                                              answerHelper ==
+                                                      answers.values.toString()
+                                                  ? BoxShadow(
+                                                      color: Colors.black
+                                                          .withOpacity(0.5),
+                                                      spreadRadius: 5,
+                                                      blurRadius: 7,
+                                                      offset: const Offset(0,
+                                                          3), // changes position of shadow
+                                                    )
+                                                  : const BoxShadow(
+                                                      color: Colors.transparent,
+                                                    ),
+                                            ],
                                           ),
                                           margin: const EdgeInsets.all(5.0),
                                           child: AnswerButton(
@@ -267,8 +286,7 @@ class _QuizState extends State<Quiz> {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (_) =>
-                                       ModulareTruppAusbildung()));
+                                  builder: (_) => ModulareTruppAusbildung()));
                         }),
                   ],
                 ),
