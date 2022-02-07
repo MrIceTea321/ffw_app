@@ -1,6 +1,6 @@
 import 'package:ffw_app/constants/buttons/standard_button.dart';
 import 'package:ffw_app/constants/colors.dart';
-import 'package:ffw_app/view/modulare_truppausbildung.dart';
+import 'package:ffw_app/view/modulare_truppausbildung/modulare_truppausbildung.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -15,26 +15,27 @@ class _WelcomeState extends State<Welcome> {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
-    return Material(
-      color: lightBlue,
-      child: Container(
-          height: size.height,
-          width: size.width,
-          decoration:shaderDecoration,
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+    return Container(
+        width: size.width,
+        height: size.height,
+        decoration: shaderDecoration,
+        child: Scaffold(
+          backgroundColor: Colors.transparent,
+          body: ListView(
             children: [
               SizedBox(
                 height: size.height * 0.35,
                 child: Image.asset('images/ffwlogo.png'),
               ),
-              Text('Wähle aus was du üben möchtest:',
+              Text('Was möchtest du üben?',
                   textAlign: TextAlign.center,
                   style: TextStyle(
-                      fontSize: size.height * 0.035,
-                      color: white,
+                    fontSize: size.height * 0.035,
+                    color: Colors.black,
                   )),
+              SizedBox(
+                height: size.height * 0.15,
+              ),
               StandardButton(
                   color: buttonColor,
                   text: 'Truppausbildung',
@@ -45,7 +46,7 @@ class _WelcomeState extends State<Welcome> {
                             builder: (_) => const ModulareTruppAusbildung()));
                   }),
             ],
-          )),
-    );
+          ),
+        ));
   }
 }

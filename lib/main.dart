@@ -1,4 +1,4 @@
-import 'package:ffw_app/view/modulare_truppausbildung.dart';
+import 'package:ffw_app/view/modulare_truppausbildung/modulare_truppausbildung.dart';
 import 'package:ffw_app/view/welcome.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
