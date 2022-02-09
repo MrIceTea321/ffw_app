@@ -29,17 +29,17 @@ class AnswerButton extends StatelessWidget {
           ),
           child: Center(
             child: Padding(
-              padding: const EdgeInsets.fromLTRB(3.0,2.0,3.0,0.0),
+              padding: const EdgeInsets.fromLTRB(5.0,2.0,5.0,0.0),
               child: AutoSizeText(
                 text,
-                minFontSize: 14,
-                stepGranularity: 2.0,
-                maxFontSize: 36,
                 textAlign: TextAlign.center,
-                maxLines: 4,
                 style: const TextStyle(
                   color: Colors.black,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 18.0
                 ),
+                maxLines: 5,
+                stepGranularity: 2.0,
               ),
             ),
           )),
