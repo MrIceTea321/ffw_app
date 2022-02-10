@@ -1,4 +1,4 @@
-html {
+body {
     min-height: calc(100% + env(safe-area-inset-top))!important;
 
     padding: env(safe-area-inset-top) env(safe-area-inset-right)
@@ -7,18 +7,19 @@ html {
 . . . background-attachment: fixed;
      background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;}
-
-body {
-    height: 500vh !important; /* Bigger than 100% to allow scroll */
-    position: static !important; /* Override absolute from flutter */
-    overflow-y: scroll !important; /* Allows verticall scrolling */
-    overflow-x: hidden !important;
-    touch-action: pan-y !important; /* Allows vertical scrolling */
-    overscroll-behavior: none; /* Avoid bouncing scrolling on top/bottom edget */
+    background-size: cover;
 }
 
-/*!* Centers flutter canvas with a size of the viewport*!
+/*body {
+    height: 500vh !important; !* Bigger than 100% to allow scroll *!
+    position: static !important; !* Override absolute from flutter *!
+    !*overflow-y: scroll !important; !* Allows verticall scrolling *!
+    overflow-x: hidden !important;
+    touch-action: pan-y !important; !* Allows vertical scrolling *!*!
+    overscroll-behavior: auto; !* Avoid bouncing scrolling on top/bottom edget *!
+}
+
+!* Centers flutter canvas with a size of the viewport*!
 flt-glass-pane {
     position: fixed !important; !* Overrides absolute from flutter *!
     top: 50vh !important;
@@ -27,15 +28,3 @@ flt-glass-pane {
     max-height: 100vh !important;
     transform: translate(-50vw, -50vh) !important;
 }*/
-
-/*
-Scrollbar hide doesn't work on iOS, they add a default one when overflow:true and -webkit-overflow-scrolling: touch;
-Sadly since iOS 13, this value is forced on iOS ->
-https://developer.apple.com/documentation/safari-release-notes/safari-13-release-notes
-*/
-::-webkit-scrollbar {
-    width: 0px;
-    height: 0px; /* Remove scrollbar space */
-    background: transparent; /* Optional: just make scrollbar invisible */
-}
-
