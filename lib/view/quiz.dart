@@ -63,19 +63,23 @@ class _QuizState extends State<Quiz> {
                                         child: Padding(
                                           padding: const EdgeInsets.fromLTRB(
                                               5.0, 15.0, 15.0, 0.0),
-                                          child: AutoSizeText(
-                                            widget.questions
-                                                .elementAt(questionIndex)
-                                                .values
-                                                .elementAt(0)
-                                                .toString(),
-                                            textAlign: TextAlign.center,
-                                            style: const TextStyle(
-                                              fontSize: 22,
-                                              color: Colors.black,
+                                          child: SizedBox(
+                                            height: size.height * 0.3,
+                                            width: size.width * 0.9,
+                                            child: AutoSizeText(
+                                              widget.questions
+                                                  .elementAt(questionIndex)
+                                                  .values
+                                                  .elementAt(0)
+                                                  .toString(),
+                                              textAlign: TextAlign.center,
+                                              style: const TextStyle(
+                                                fontSize: 22,
+                                                color: Colors.black,
+                                              ),
+                                              maxLines: 5,
+                                              stepGranularity: 2.0,
                                             ),
-                                            maxLines: 5,
-                                            stepGranularity: 2.0,
                                           ),
                                         ),
                                       ),
@@ -127,7 +131,7 @@ class _QuizState extends State<Quiz> {
                             ),
                             Padding(
                               padding: EdgeInsets.fromLTRB(
-                                  2, size.height * 0.3, 0.0, 0.0),
+                                  5, size.height * 0.3, 0.0, 0.0),
                               child: AutoSizeText(
                                 'Frage ' +
                                     questionIndexHelperTwo.toString() +
@@ -157,18 +161,18 @@ class _QuizState extends State<Quiz> {
                                     Expanded(
                                       child: Container(
                                         decoration: BoxDecoration(
-                                            borderRadius: BorderRadius.only(
+                                            /* borderRadius: BorderRadius.only(
                                               bottomRight: Radius.circular(
                                                   size.height * 0.25),
-                                            ),
+                                            ),*/
                                             gradient: LinearGradient(
                                                 begin: Alignment.topLeft,
                                                 end: Alignment.bottomRight,
                                                 colors: [
-                                                  peach,
-                                                  lightPeach,
-                                                  white
-                                                ])),
+                                              peach,
+                                              lightPeach,
+                                              white
+                                            ])),
                                         height: size.height * 0.35,
                                         width: size.width * 0.9,
                                         child: Padding(
@@ -200,28 +204,28 @@ class _QuizState extends State<Quiz> {
                                             ['answers']
                                         as List<Map<String, Object>>)
                                     .map((answers) {
-                                  int score =
-                                      int.parse(answers['score'].toString());
                                   return Container(
+                                    width: size.width * 0.915,
+                                    margin: const EdgeInsets.all(5.0),
                                     decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(32.0),
+                                      borderRadius: BorderRadius.circular(7.0),
                                       boxShadow: [
                                         answerHelper ==
                                                 answers.values.toString()
                                             ? BoxShadow(
                                                 color: Colors.black
-                                                    .withOpacity(0.3),
-                                                spreadRadius: 1,
-                                                blurRadius:
-                                                    3, // changes position of shadow
+                                                    .withOpacity(0.5),
+                                                spreadRadius: 6,
+                                                blurRadius: 3,
+                                                offset: const Offset(0,
+                                                    1), // changes position of shadow
                                               )
                                             : const BoxShadow(
                                                 color: Colors.transparent,
                                               ),
                                       ],
                                     ),
-                                    padding: const EdgeInsets.fromLTRB(
-                                        10.0, 0.0, 10.0, 0.0),
+                                    padding: const EdgeInsets.all(2.0),
                                     child: Row(
                                       children: <Widget>[
                                         Expanded(
@@ -229,10 +233,11 @@ class _QuizState extends State<Quiz> {
                                             margin: const EdgeInsets.all(5.0),
                                             child: AnswerButton(
                                               onPressed: () {},
-                                              color: getButtonColor(
-                                                  answers['text'].toString(),
-                                                  answerHelper,
-                                                  score),
+                                              color: int.parse(answers['score']
+                                                          .toString()) ==
+                                                      1
+                                                  ? Colors.green
+                                                  : Colors.red,
                                               text: answers['text'].toString(),
                                             ),
                                           ),
@@ -245,7 +250,7 @@ class _QuizState extends State<Quiz> {
                             ),
                             Padding(
                               padding: EdgeInsets.fromLTRB(
-                                  2, size.height * 0.3, 0.0, 0.0),
+                                  5, size.height * 0.3, 0.0, 0.0),
                               child: AutoSizeText(
                                 'Frage ' +
                                     questionIndexHelperTwo.toString() +
@@ -261,29 +266,33 @@ class _QuizState extends State<Quiz> {
                               ),
                             ),
                             Padding(
-                              padding: EdgeInsets.fromLTRB(size.width * 0.75,
-                                  size.height * 0.33, 5.0, 0.0),
+                              padding: EdgeInsets.fromLTRB(
+                                  size.width * 0.8, size.height * 0.275, 5.0, 0.0),
                               child: Container(
+                                margin: const EdgeInsets.all(1.0),
                                 decoration: BoxDecoration(
                                   borderRadius: const BorderRadius.all(
-                                      Radius.circular(12.0)),
-                                  color: lightPeach,
+                                      Radius.circular(10.0)),
+                                  color: Colors.transparent,
                                   border:
                                       Border.all(color: darkBlue, width: 1.0),
                                 ),
-                                height: size.height * 0.06,
-                                width: size.width * 0.27,
+                                height: size.height * 0.065,
+                                width: size.width * 0.29,
                                 child: TextButton(
                                   onPressed: () {
                                     setState(() {
                                       showAnswer = false;
                                       answerHelper = '';
+                                      questionIndexHelperTwo =
+                                          questionIndex + 1;
                                     });
                                   },
                                   child: const AutoSizeText(
                                     'Weiter',
+                                    textAlign: TextAlign.center,
                                     style: TextStyle(
-                                      fontSize: 14,
+                                      fontSize: 16,
                                       color: Colors.black,
                                     ),
                                     maxLines: 1,
@@ -373,7 +382,6 @@ class _QuizState extends State<Quiz> {
     totalScore += score;
     setState(() {
       questionIndex = questionIndex + 1;
-      questionIndexHelperTwo = questionIndex + 1;
     });
   }
 
