@@ -227,7 +227,6 @@ class _QuizState extends State<Quiz> {
                                               ),
                                       ],
                                     ),
-                                    padding: const EdgeInsets.all(2.0),
                                     child: Row(
                                       children: <Widget>[
                                         Expanded(
@@ -268,20 +267,39 @@ class _QuizState extends State<Quiz> {
                               ),
                             ),
                             Padding(
-                              padding: EdgeInsets.fromLTRB(size.width * 0.85,
-                                  size.height * 0.275, 5.0, 0.0),
-                              child: IconButton(
-                                icon: Icon(Icons.arrow_forward,
-                                    size: size.width * 0.12, color: lightBlue),
-                                onPressed: () {
-                                  setState(() {
-                                    showAnswer = false;
-                                    answerHelper = '';
-                                    questionIndexHelperTwo = questionIndex + 1;
-                                  });
-                                },
+                              padding: EdgeInsets.fromLTRB(size.width * 0.81,
+                                  size.height * 0.28, 5.0, 0.0),
+                              child: Container(
+                                alignment: Alignment.center,
+                                width: 60,
+                                height: 60,
+                                child: TextButton(
+                                  style: ButtonStyle(
+                                      overlayColor:
+                                          MaterialStateProperty.all(lightPeach),
+                                      shape: MaterialStateProperty.all<
+                                              RoundedRectangleBorder>(
+                                          RoundedRectangleBorder(
+                                              borderRadius:
+                                                  BorderRadius.circular(100.0),
+                                              side: const BorderSide(
+                                                  color: white)))),
+                                  onPressed: () {
+                                    setState(() {
+                                      showAnswer = false;
+                                      answerHelper = '';
+                                      questionIndexHelperTwo =
+                                          questionIndex + 1;
+                                    });
+                                  },
+                                  child: const Icon(
+                                    Icons.arrow_forward,
+                                    size: 45,
+                                    color: white,
+                                  ),
+                                ),
                               ),
-                            ),
+                            )
                           ]),
                         ),
                       ))
