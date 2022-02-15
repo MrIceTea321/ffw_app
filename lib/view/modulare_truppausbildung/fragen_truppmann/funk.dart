@@ -190,7 +190,7 @@ class Funk {
     },
     {
       'questionText':
-          'Eigenhändiges Ändern einer Nachricht ist dem Betriebspersonal...',
+          'Eigenhändiges ändern einer Nachricht ist dem Betriebspersonal...',
       'answers': [
         {'text': 'in Einzelfällen erlaubt', 'score': 0},
         {'text': 'verboten', 'score': 1},

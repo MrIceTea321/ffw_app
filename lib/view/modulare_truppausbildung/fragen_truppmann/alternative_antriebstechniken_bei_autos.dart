@@ -50,7 +50,7 @@ class AlternativeAntriebstechnikenBeiAutos {
         {'text': 'Es sind keine besonderen Maßnahmen erforderlich', 'score': 0},
         {
           'text':
-              'Gefahrenbereich weiträumig sperren; Motor abstellen; Gasabsperrventil schließen',
+              'Gefahrenbereich weiträumig sperren, Motor abstellen; Gasabsperrventil schließen',
           'score': 1
         },
         {
