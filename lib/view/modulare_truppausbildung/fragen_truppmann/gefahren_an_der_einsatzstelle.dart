@@ -15,24 +15,6 @@ class GefahrenAnDerEinsatzstelle {
       ]
     },
     {
-      'questionText':
-          'Welche der folgenden Symptome sind üblicherweise anzutreffende negative Stressreaktionen?',
-      'answers': [
-        {'text': 'Zittern, Schwitzen', 'score': 1},
-        {'text': 'Konzentrationssteigerung', 'score': 0},
-        {'text': 'Euphorie', 'score': 0}
-      ]
-    },
-    {
-      'questionText':
-          'Welcher Sicherheitsabstand muss mindestens zu spannungsführenden Anlagen mit einer Spannung von 380 kV eingehalten werden?',
-      'answers': [
-        {'text': '5 m', 'score': 1},
-        {'text': '1 m', 'score': 0},
-        {'text': '1,5 m', 'score': 0}
-      ]
-    },
-    {
       'questionText': 'Was ist der Trümmerschatten?',
       'answers': [
         {

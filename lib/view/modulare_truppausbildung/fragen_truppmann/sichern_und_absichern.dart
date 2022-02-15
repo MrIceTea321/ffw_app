@@ -25,7 +25,7 @@ class SichernUndAbsichern {
       'questionText': 'Welchen Zweck hat die Feuerwehrleine?',
       'answers': [
         {
-          'text': 'Rettung; Selbstrettung; Sicherung/Aufziehen von Geräten',
+          'text': 'Rettung, Selbstrettung, Sicherung/Aufziehen von Geräten',
           'score': 1
         },
         {'text': 'Verwendung als Halte- und Ventilleine', 'score': 0},
@@ -111,7 +111,7 @@ class SichernUndAbsichern {
       'answers': [
         {
           'text':
-              'Ja, es genügt eine Feuerwehrleine und der Feuerwehr- Haltegurt',
+              'Ja, es genügt eine Feuerwehrleine und der Feuerwehr-Haltegurt',
           'score': 1
         },
         {
@@ -139,22 +139,6 @@ class SichernUndAbsichern {
               'Wenn ich abstürzen sollte, hält mich der Feuerwehr- Haltegurt und die Feuerwehrleine',
           'score': 0
         }
-      ]
-    },
-    {
-      'questionText': 'Was ist beim Sichern einer Person zu beachten?',
-      'answers': [
-        {
-          'text':
-              'Der Anschlagpunkt ist oberhalb der zu sichernden Person anzubringen',
-          'score': 1
-        },
-        {
-          'text':
-              'Es ist genügend Schlaffseil vorzuhalten, damit der Gesicherte in seiner Bewegungsfreiheit nicht eingeschränkt wird',
-          'score': 0
-        },
-        {'text': 'Das Seil über scharfe Kanten führen', 'score': 0}
       ]
     },
   ];

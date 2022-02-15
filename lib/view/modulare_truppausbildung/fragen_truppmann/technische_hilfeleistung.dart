@@ -38,7 +38,7 @@ class THL {
           'Welche Aufgabe hat der Wassertrupp bei einem Hilfeleistungseinsatz?',
       'answers': [
         {
-          'text': 'Sichern der Einsatzstelle, z. B. gegen Brandgefahr',
+          'text': 'Sichern der Einsatzstelle, z.B. gegen Brandgefahr',
           'score': 1
         },
         {'text': 'Bereitstellen der Geräte', 'score': 0},

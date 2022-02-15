@@ -125,7 +125,7 @@ class GefahrenBeimEinsatz {
         {'text': 'Windrichtung beachten', 'score': 0}
       ]
     }, {
-      'questionText': 'Wie kann ich mich vor der Gefahr durch Erkrankung/ Ansteckung schützen?',
+      'questionText': 'Wie kann ich mich vor der Gefahr durch Erkrankung/Ansteckung schützen?',
       'answers': [
         {'text': 'Immer Atemschutz tragen', 'score': 0},
         {'text': 'Schnittschutzkleidung tragen', 'score': 0},

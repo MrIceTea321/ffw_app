@@ -10,14 +10,14 @@ class Geraetekunde{
 
   static final fragenGeraetekunde = [
     {
-      'questionText': ' Welche ergänzende Schutzausrüstung kann der Einheitsführer bei Einsätzen mit gefährlichen Stoffen anordnen?',
+      'questionText': 'Welche ergänzende Schutzausrüstung kann der Einheitsführer bei Einsätzen mit gefährlichen Stoffen anordnen?',
       'answers': [
         {'text': 'Schutzanzug Bayern 2000', 'score': 0},
         {'text': 'Feuerwehrhelm', 'score': 0},
         {'text': 'Pressluftatmer', 'score': 1}
       ]
     }, {
-      'questionText': ' Welche Schutzhandschuhe sind bei der Behandlung von Verletzten zu verwenden?',
+      'questionText': 'Welche Schutzhandschuhe sind bei der Behandlung von Verletzten zu verwenden?',
       'answers': [
         {'text': 'Infektionsschutzhandschuhe', 'score': 1},
         {'text': '5-Finger-Lederhandschuhe mit langen Stulpen und Verstärkungen', 'score': 0},
@@ -57,14 +57,6 @@ class Geraetekunde{
       ]
     },
     {
-      'questionText': 'Wer ist für die Ernennung von Dienstgraden in der Feuerwehr zuständig?',
-      'answers': [
-        {'text': 'Bürgermeister', 'score': 0},
-        {'text': 'Kommandant', 'score': 1},
-        {'text': 'Vorstand der Freiwilligen Feuerwehr', 'score': 0}
-      ]
-    },
-    {
       'questionText': 'Wozu findet das Standrohr Verwendung?',
       'answers': [
         {'text': 'Zur Wasserentnahme aus Überflurhydranten', 'score': 0},
@@ -91,8 +83,8 @@ class Geraetekunde{
     {
       'questionText': 'Warum sind Hohlstrahlrohre für den Innenangriff anstelle von Mehrzweckstrahlrohren zu bevorzugen?',
       'answers': [
-        {'text': 'Hohlstrahlrohre sind teurer', 'score': 1},
-        {'text': 'Mit Hohlstrahlrohren lässt sich eine bessere Kühl- und Löschwirkung erzielen', 'score': 0},
+        {'text': 'Hohlstrahlrohre sind teurer', 'score': 0},
+        {'text': 'Mit Hohlstrahlrohren lässt sich eine bessere Kühl- und Löschwirkung erzielen', 'score': 1},
         {'text': 'Hohlstrahlrohre besitzen keine Spülstellung', 'score': 0}
       ]
     },
@@ -121,11 +113,11 @@ class Geraetekunde{
       ]
     },
     {
-      'questionText': 'Worauf ist bei der Inbetriebnahme eines Unterflurhydrantenzu achten?',
+      'questionText': 'Worauf ist bei der Inbetriebnahme eines Unterflurhydranten zu achten?',
       'answers': [
         {'text': 'Bei Frostgefahr die Straßenkappe mit Sand füllen', 'score': 0},
         {'text': 'Es ist immer eine Wasseruhr am Standrohr anzubringen', 'score': 0},
-        {'text': 'Beim Setzen des Standrohres muss die Klauenmutter ganz nach unten geschraubt sein', 'score': 1}
+        {'text': 'Beim setzen des Standrohres muss die Klauenmutter ganz nach unten geschraubt sein', 'score': 1}
       ]
     },
     {

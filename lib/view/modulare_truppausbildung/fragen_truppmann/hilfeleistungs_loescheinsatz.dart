@@ -90,7 +90,7 @@ class HilfeleistungsLoescheinsatz {
         {'text': 'Truppführer entscheidet selbst', 'score': 0},
         {
           'text':
-              'Eine besondere Anordnung ist nicht notwendig.Jeder weiß selbst, was er tun muss',
+              'Eine besondere Anordnung ist nicht notwendig. Jeder weiß selbst, was er tun muss',
           'score': 0
         },
         {'text': 'Der Einheitsführer', 'score': 1}
@@ -159,7 +159,7 @@ class HilfeleistungsLoescheinsatz {
     },
     {
       'questionText':
-          'Zur Rettung und Sicherung wird ein Brustbund angelegt.Welche Knoten/Stiche werden zur Sicherungverwendet?',
+          'Zur Rettung und Sicherung wird ein Brustbund angelegt. Welche Knoten/Stiche werden zur Sicherungverwendet?',
       'answers': [
         {'text': 'Zimmermannsschlag', 'score': 0},
         {'text': 'Doppelschlinge und Halbschlag', 'score': 0},
