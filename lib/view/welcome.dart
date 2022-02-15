@@ -3,6 +3,7 @@ import 'dart:html';
 import 'package:ffw_app/constants/buttons/standard_button.dart';
 import 'package:ffw_app/constants/colors.dart';
 import 'package:ffw_app/constants/custom_widgets/alert_with_function.dart';
+import 'package:ffw_app/view/leistungspruefung/leistungspruefung.dart';
 import 'package:ffw_app/view/modulare_truppausbildung/modulare_truppausbildung.dart';
 import 'package:flutter/material.dart';
 
@@ -60,11 +61,37 @@ class _WelcomeState extends State<Welcome> {
                               Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (_) => ModulareTruppAusbildung()));
+                                      builder: (_) =>
+                                          ModulareTruppAusbildung()));
                             });
                       },
                     );
                   }),
+              SizedBox(
+                height: size.height * 0.09,
+              ),
+              /*StandardButton(
+                  color: buttonColor,
+                  text: 'Leistungsprüfung 👩‍🚒 ‍👨‍🚒',
+                  onPressed: () {
+                    showDialog(
+                      context: context,
+                      builder: (BuildContext context) {
+                        return AlertWithFunction(
+                            title: 'Achtung',
+                            text:
+                            'Um die App richtig nutzen zu können, halte dein Smartphone bitte immer Hochkant ☺️',
+                            buttonText: 'zur Ausbildung',
+                            onPressed: () {
+                              Navigator.pop(context);
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (_) => Leistungspruefung()));
+                            });
+                      },
+                    );
+                  }),*/
             ],
           ),
         ),

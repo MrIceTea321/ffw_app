@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../constants/buttons/answer_button.dart';
 import '../constants/buttons/standard_button.dart';
 import '../constants/colors.dart';
+import '../constants/text_constants.dart';
 import 'modulare_truppausbildung/modulare_truppausbildung.dart';
 
 class Quiz extends StatefulWidget {
@@ -24,7 +25,8 @@ class _QuizState extends State<Quiz> {
   String answerHelper = '';
   Color buttonColor = Colors.transparent;
   int questionIndexHelperTwo = 1;
-  bool hasPicture = false;
+  bool hasImage = false;
+  String imageString = '';
 
   @override
   Widget build(BuildContext context) {
@@ -94,6 +96,11 @@ class _QuizState extends State<Quiz> {
                                 ...(widget.questions[questionIndex]['answers']
                                         as List<Map<String, Object>>)
                                     .map((answers) {
+                                  questionHasImage(widget.questions
+                                      .elementAt(questionIndex)
+                                      .values
+                                      .elementAt(0)
+                                      .toString());
                                   return Container(
                                     padding: const EdgeInsets.fromLTRB(
                                         20.0, 0.0, 20.0, 0.0),
@@ -148,49 +155,56 @@ class _QuizState extends State<Quiz> {
                                 stepGranularity: 2.0,
                               ),
                             ),
-                            hasPicture ? Padding(
-                              padding: EdgeInsets.fromLTRB(size.width * 0.81,
-                                  size.height * 0.28, 5.0, 0.0),
-                              child: Container(
-                                alignment: Alignment.center,
-                                width: 60,
-                                height: 60,
-                                child: TextButton(
-                                  style: ButtonStyle(
-                                      overlayColor:
-                                          MaterialStateProperty.all(lightPeach),
-                                      shape: MaterialStateProperty.all<
-                                              RoundedRectangleBorder>(
-                                          RoundedRectangleBorder(
-                                              borderRadius:
-                                                  BorderRadius.circular(100.0),
-                                              side: const BorderSide(
-                                                  color: white)))),
-                                  onPressed: () {
-                                    showDialog(
-                                      context: context,
-                                      builder: (BuildContext context) {
-                                        return Dialog(
-                                            child: Container(
-                                                width: size.width * 0.8,
-                                                height: size.height * 0.5,
-                                                decoration: const BoxDecoration(
-                                                    image: DecorationImage(
-                                                        image: AssetImage(
-                                                            'images/ffwlogo.png'),
-                                                        fit: BoxFit
-                                                            .scaleDown))));
-                                      },
-                                    );
-                                  },
-                                  child: const Icon(
-                                    Icons.image_outlined,
-                                    size: 45,
-                                    color: white,
-                                  ),
-                                ),
-                              ),
-                            ) : const SizedBox(),
+                            hasImage
+                                ? Padding(
+                                    padding: EdgeInsets.fromLTRB(
+                                        size.width * 0.81,
+                                        size.height * 0.28,
+                                        5.0,
+                                        0.0),
+                                    child: Container(
+                                      alignment: Alignment.center,
+                                      width: 60,
+                                      height: 60,
+                                      child: TextButton(
+                                        style: ButtonStyle(
+                                            overlayColor:
+                                                MaterialStateProperty.all(
+                                                    lightPeach),
+                                            shape: MaterialStateProperty.all<
+                                                    RoundedRectangleBorder>(
+                                                RoundedRectangleBorder(
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                            100.0),
+                                                    side: const BorderSide(
+                                                        color: white)))),
+                                        onPressed: () {
+                                          showDialog(
+                                            context: context,
+                                            builder: (BuildContext context) {
+                                              return Dialog(
+                                                  child: Container(
+                                                      width: size.width * 0.8,
+                                                      height: size.height * 0.5,
+                                                      decoration: BoxDecoration(
+                                                          image: DecorationImage(
+                                                              image: AssetImage(
+                                                                  imageString),
+                                                              fit: BoxFit
+                                                                  .scaleDown))));
+                                            },
+                                          );
+                                        },
+                                        child: const Icon(
+                                          Icons.image_outlined,
+                                          size: 45,
+                                          color: white,
+                                        ),
+                                      ),
+                                    ),
+                                  )
+                                : const SizedBox(),
                           ]),
                         ),
                       )
@@ -310,6 +324,56 @@ class _QuizState extends State<Quiz> {
                                 stepGranularity: 2.0,
                               ),
                             ),
+                            hasImage
+                                ? Padding(
+                                    padding: EdgeInsets.fromLTRB(
+                                        size.width * 0.4,
+                                        size.height * 0.28,
+                                        size.width * 0.4,
+                                        0.0),
+                                    child: Container(
+                                      alignment: Alignment.center,
+                                      width: 60,
+                                      height: 60,
+                                      child: TextButton(
+                                        style: ButtonStyle(
+                                            overlayColor:
+                                                MaterialStateProperty.all(
+                                                    lightPeach),
+                                            shape: MaterialStateProperty.all<
+                                                    RoundedRectangleBorder>(
+                                                RoundedRectangleBorder(
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                            100.0),
+                                                    side: const BorderSide(
+                                                        color: white)))),
+                                        onPressed: () {
+                                          showDialog(
+                                            context: context,
+                                            builder: (BuildContext context) {
+                                              return Dialog(
+                                                  child: Container(
+                                                      width: size.width * 0.8,
+                                                      height: size.height * 0.5,
+                                                      decoration: BoxDecoration(
+                                                          image: DecorationImage(
+                                                              image: AssetImage(
+                                                                  imageString),
+                                                              fit: BoxFit
+                                                                  .scaleDown))));
+                                            },
+                                          );
+                                        },
+                                        child: const Icon(
+                                          Icons.image_search_outlined,
+                                          size: 45,
+                                          color: white,
+                                        ),
+                                      ),
+                                    ),
+                                  )
+                                : const SizedBox(),
                             Padding(
                               padding: EdgeInsets.fromLTRB(size.width * 0.81,
                                   size.height * 0.28, 5.0, 0.0),
@@ -334,6 +398,8 @@ class _QuizState extends State<Quiz> {
                                       answerHelper = '';
                                       questionIndexHelperTwo =
                                           questionIndex + 1;
+                                      imageString = '';
+                                      hasImage = false;
                                     });
                                   },
                                   child: const Icon(
@@ -442,7 +508,12 @@ class _QuizState extends State<Quiz> {
     }
   }
 
-  void questionHasPicture(String question){
-
+  void questionHasImage(String question) {
+    for (int i = 0; i < questionsWithImages.length; i++) {
+      if (questionsWithImages.keys.elementAt(i) == question) {
+        imageString = questionsWithImages.values.elementAt(i);
+        hasImage = true;
+      }
+    }
   }
 }

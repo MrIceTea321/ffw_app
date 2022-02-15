@@ -1,4 +1,4 @@
-Map<String, String> questionsWithImages = {
+ const Map<String, String> questionsWithImages = {
   'Sie sehen auf einer Kiste der Ladung eines verunglückten LKW folgendes Schild. Was melden Sie Ihrem Gruppenführer?':
       'images/1.png',
   'Sie sehen an der Tür eines Gebäudes folgendes Schild(schwarz auf gelbem Hintergrund). Womit müssen Sie rechnen?':
