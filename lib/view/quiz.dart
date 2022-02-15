@@ -24,6 +24,7 @@ class _QuizState extends State<Quiz> {
   String answerHelper = '';
   Color buttonColor = Colors.transparent;
   int questionIndexHelperTwo = 1;
+  bool hasPicture = false;
 
   @override
   Widget build(BuildContext context) {
@@ -78,7 +79,7 @@ class _QuizState extends State<Quiz> {
                                                 fontSize: 22,
                                                 color: Colors.black,
                                               ),
-                                              maxLines: 5,
+                                              maxLines: 7,
                                               stepGranularity: 2.0,
                                             ),
                                           ),
@@ -147,6 +148,49 @@ class _QuizState extends State<Quiz> {
                                 stepGranularity: 2.0,
                               ),
                             ),
+                            hasPicture ? Padding(
+                              padding: EdgeInsets.fromLTRB(size.width * 0.81,
+                                  size.height * 0.28, 5.0, 0.0),
+                              child: Container(
+                                alignment: Alignment.center,
+                                width: 60,
+                                height: 60,
+                                child: TextButton(
+                                  style: ButtonStyle(
+                                      overlayColor:
+                                          MaterialStateProperty.all(lightPeach),
+                                      shape: MaterialStateProperty.all<
+                                              RoundedRectangleBorder>(
+                                          RoundedRectangleBorder(
+                                              borderRadius:
+                                                  BorderRadius.circular(100.0),
+                                              side: const BorderSide(
+                                                  color: white)))),
+                                  onPressed: () {
+                                    showDialog(
+                                      context: context,
+                                      builder: (BuildContext context) {
+                                        return Dialog(
+                                            child: Container(
+                                                width: size.width * 0.8,
+                                                height: size.height * 0.5,
+                                                decoration: const BoxDecoration(
+                                                    image: DecorationImage(
+                                                        image: AssetImage(
+                                                            'images/ffwlogo.png'),
+                                                        fit: BoxFit
+                                                            .scaleDown))));
+                                      },
+                                    );
+                                  },
+                                  child: const Icon(
+                                    Icons.image_outlined,
+                                    size: 45,
+                                    color: white,
+                                  ),
+                                ),
+                              ),
+                            ) : const SizedBox(),
                           ]),
                         ),
                       )
@@ -191,7 +235,7 @@ class _QuizState extends State<Quiz> {
                                               fontSize: 22,
                                               color: Colors.black,
                                             ),
-                                            maxLines: 5,
+                                            maxLines: 7,
                                             stepGranularity: 2.0,
                                           ),
                                         ),
@@ -396,5 +440,9 @@ class _QuizState extends State<Quiz> {
     } else {
       return Colors.red;
     }
+  }
+
+  void questionHasPicture(String question){
+
   }
 }

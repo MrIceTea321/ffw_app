@@ -15,15 +15,6 @@ class BrennenUndLoeschen {
     },
     {
       'questionText':
-          'Welche Aussage über brennbare Flüssigkeiten ist richtig??',
-      'answers': [
-        {'text': 'Anbringen von Dekorationen', 'score': 0},
-        {'text': 'Brandbekämpfung und technische Hilfeleistung', 'score': 1},
-        {'text': 'Auspumpen von Baugruben', 'score': 0}
-      ]
-    },
-    {
-      'questionText':
           'Welche Aussage über brennbare Flüssigkeiten ist richtig?',
       'answers': [
         {
@@ -94,8 +85,8 @@ class BrennenUndLoeschen {
     {
       'questionText': 'Welche Stoffe gehören zur Brandklasse A?',
       'answers': [
-        {'text': 'Holz, Papier, Kohle', 'score': 1},
         {'text': 'Benzin, Diesel, Petroleum', 'score': 0},
+        {'text': 'Holz, Papier, Kohle', 'score': 1},
         {'text': 'Propan, Butan, Acetylen', 'score': 0}
       ]
     },
@@ -137,9 +128,9 @@ class BrennenUndLoeschen {
     },
     {
       'questionText':
-          'Kann es durch falschen Strahlrohreinsatz bei der Brandbekämpfung zu einer Vergrößerung der Gefahr kommen ?',
+          'Kann es durch falschen Strahlrohreinsatz bei der Brandbekämpfung zu einer Vergrößerung der Gefahr kommen?',
       'answers': [
-        {'text': 'Ja, z. B. Fettexplosion oder Staubexplosion', 'score': 1},
+        {'text': 'Ja, z.B. Fettexplosion oder Staubexplosion', 'score': 1},
         {
           'text':
               'Kann nur bei unerfahrenen Feuerwehrdienstleistenden vorkommen',

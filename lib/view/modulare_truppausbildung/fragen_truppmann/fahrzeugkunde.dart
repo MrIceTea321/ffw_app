@@ -7,8 +7,8 @@ class Fahrzeugkunde {
           'Welches Feuerwehrfahrzeug hat eine Löschgruppe als Besatzung?',
       'answers': [
         {'text': 'TSF', 'score': 0},
-        {'text': 'TLF', 'score': 1},
-        {'text': 'HLF', 'score': 0}
+        {'text': 'TLF', 'score': 0},
+        {'text': 'HLF', 'score': 1}
       ]
     },
     {
@@ -16,8 +16,8 @@ class Fahrzeugkunde {
           'Welche Steckleiter befindet sich in der Regel auf dem Dach eines TSF-W?',
       'answers': [
         {'text': 'Einteilige Steckleiter', 'score': 0},
-        {'text': 'Zweiteilige Steckleiter', 'score': 1},
-        {'text': 'Vierteilige Steckleiter', 'score': 0}
+        {'text': 'Zweiteilige Steckleiter', 'score': 0},
+        {'text': 'Vierteilige Steckleiter', 'score': 1}
       ]
     },
     {
