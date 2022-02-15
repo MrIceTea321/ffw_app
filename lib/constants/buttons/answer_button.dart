@@ -20,7 +20,7 @@ class AnswerButton extends StatelessWidget {
     return TextButton(
       onPressed: onPressed,
       child: Container(
-          height: size.height * 0.18,
+          height: size.height * 0.165,
           width: size.width * 0.9,
           decoration: BoxDecoration(
             borderRadius: const BorderRadius.all(Radius.circular(32.0)),

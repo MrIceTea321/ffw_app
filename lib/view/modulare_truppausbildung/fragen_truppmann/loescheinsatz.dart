@@ -95,8 +95,8 @@ class Loescheinsatz {
       'questionText': 'Welcher Trupp setzt im Brandeinsatz den Verteiler?',
       'answers': [
         {'text': 'Wassertrupp', 'score': 0},
-        {'text': 'Angriffstrupp', 'score': 0},
-        {'text': 'Schlauchtrupp', 'score': 1}
+        {'text': 'Angriffstrupp', 'score': 1},
+        {'text': 'Schlauchtrupp', 'score': 0}
       ]
     },
     {
@@ -107,7 +107,7 @@ class Loescheinsatz {
         {'text': 'Dient dem militärischen Dienst', 'score': 0},
         {
           'text':
-              'Ermöglicht während der Anfahrt, sich auf die entsprechendenFunktionstätigkeiten vorzubereiten',
+              'Ermöglicht während der Anfahrt, sich auf die entsprechenden Funktionstätigkeiten vorzubereiten',
           'score': 1
         }
       ]
@@ -282,7 +282,7 @@ class Loescheinsatz {
     },
     {
       'questionText':
-          'Der Einheitsführer befiehlt: „Wasserentnahmestelle der Überflurhydrant am Bürgersteig, Verteiler zur Gartentür, zum Einsatz fertig!”. Siesind Angriffstruppführer, wie platzieren sie den Verteiler?',
+          'Der Einheitsführer befiehlt: „Wasserentnahmestelle der Überflurhydrant am Bürgersteig, Verteiler zur Gartentür, zum Einsatz fertig!”. Sie sind Angriffstruppführer, wie platzieren sie den Verteiler?',
       'answers': [
         {
           'text':

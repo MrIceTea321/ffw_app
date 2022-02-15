@@ -38,7 +38,7 @@ class THL {
           'Welche Aufgabe hat der Wassertrupp bei einem Hilfeleistungseinsatz?',
       'answers': [
         {
-          'text': 'Sichern der Einsatzstelle, z. B. gegen Brandgefahr',
+          'text': 'Sichern der Einsatzstelle, z.B. gegen Brandgefahr',
           'score': 1
         },
         {'text': 'Bereitstellen der Geräte', 'score': 0},
@@ -192,7 +192,7 @@ class THL {
       ]
     },
     {
-      'questionText': 'Welche Einsatzmaßnahmen beschreibt die GAMSRegel?',
+      'questionText': 'Welche Einsatzmaßnahmen beschreibt die GAMS-Regel?',
       'answers': [
         {'text': 'Gase Absorbieren, Mineralöle Separieren', 'score': 0},
         {
@@ -221,7 +221,7 @@ class THL {
     },
     {
       'questionText':
-          ' Welche Gefahr besteht bei folgender Kennzeichnung (schwarz-weiß)?',
+          'Welche Gefahr besteht bei folgender Kennzeichnung (schwarz-weiß)?',
       'answers': [
         {'text': 'Gesundheitsgefahr', 'score': 0},
         {'text': 'Gefahr durch erwärmte Stoffe', 'score': 0},

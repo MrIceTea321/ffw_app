@@ -17,20 +17,20 @@ class RettungVonPersonen {
       'answers': [
         {'text': 'Verletzte müssen immer schnellstmöglich aus dem Fahrzeug geholt werden', 'score': 0},
         {'text': 'Eingeklemmte Personen müssen sofort befreit werden', 'score': 0},
-        {'text': 'Sofern keine akute Gefahr durch Brand, Bewusstlosigkeit ä. besteht, sollen Verletzte im Fahrzeugverbleiben bis der Rettungsdienst die medizinischeLage beurteilt hat', 'score': 1}
+        {'text': 'Sofern keine akute Gefahr durch Brand, Bewusstlosigkeit ä. besteht, sollen Verletzte im Fahrzeug verbleiben bis der Rettungsdienst die medizinischeLage beurteilt hat', 'score': 1}
       ]
     },{
       'questionText': 'Was gehört zur Überprüfung der lebenswichtigen Körperfunktionen?',
       'answers': [
         {'text': 'Ich sorge mit Rettungsdecke oder Krankenhausdecke für Wärmeerhalt', 'score': 0},
-        {'text': 'Ich spreche ihn laut an. Ich schüttle an den Schultern,kontrolliere Mund und Rachenraum, stelle die Atmung fest', 'score': 1},
+        {'text': 'Ich spreche die Person laut an. Ich schüttle an den Schultern, kontrolliere Mund und Rachenraum, stelle die Atmung fest', 'score': 1},
         {'text': 'Ich decke keimfrei die Brandwunden ab', 'score': 0}
       ]
     },{
       'questionText': 'Wie betreue ich als Ersthelfer (Feuerwehrdienstleistender) eine verletzte Person?',
       'answers': [
         {'text': 'Das ist nicht Aufgabe der Feuerwehr', 'score': 0},
-        {'text': 'Ich leiste Erste Hilfe. Sage, dass ich für ihn da bin, dass der Rettungsdienst informiert ist. Ich spreche ihm gut zu und höre zu', 'score': 1},
+        {'text': 'Ich leiste Erste Hilfe. Sage, dass ich für sie da bin, dass der Rettungsdienst informiert ist. Ich spreche ihr gut zu und höre zu', 'score': 1},
         {'text': 'Ich warte bis der Rettungsdienst an der Einsatzstelle ist', 'score': 0}
       ]
     },{
@@ -51,7 +51,7 @@ class RettungVonPersonen {
       'questionText': 'Wie gehen Sie beim Vorfinden einer bewusstlosen Person vor?',
       'answers': [
         {'text': 'Den Verletzten in die stabile Seitenlage bringen', 'score': 0},
-        {'text': 'Ich kontrolliere die Atmung und den Mundraum, dannbringe ich den Verletzten in die stabile Seitenlage und betreue ihn bis zum Eintreffen des Rettungsdienstes', 'score': 1},
+        {'text': 'Ich kontrolliere die Atmung und den Mundraum, dann bringe ich den Verletzten in die stabile Seitenlage und betreue ihn bis zum Eintreffen des Rettungsdienstes', 'score': 1},
         {'text': 'Die Polizei verständigen', 'score': 0}
       ]
     }

@@ -29,14 +29,14 @@ class Einsatzhygiene {
       'questionText': 'Nach einem Feuerwehreinsatz ist Ihre Einsatzkleidung stark verschmutzt. Wie verhalten Sie sich vor dem Abrücken?',
       'answers': [
         {'text': 'Es ist nichts besonderes zu beachten, lediglich die Fenster der Mannschaftskabine öffnen', 'score': 0},
-        {'text': 'Stark verschmutzte Einsatzkleidung nicht in der Mannschaftskabine transportieren; gesondert in einem Behälter/Sack transportieren', 'score': 1},
+        {'text': 'Stark verschmutzte Einsatzkleidung nicht in der Mannschaftskabine transportieren, gesondert in einem Behälter/Sack transportieren', 'score': 1},
         {'text': 'Es ist ausreichend, die Einsatzkleidung am Gerätehaus zu reinigen', 'score': 0}
       ]
     }, {
       'questionText': 'Sie rücken nach einem Feuerwehreinsatz im Gerätehaus ein, wie verhalten Sie sich richtig?',
       'answers': [
         {'text': 'Nach dem Einrücken ist die Verpflegung zu organisieren', 'score': 0},
-        {'text': 'Im Gerätehaus Aufenthalts- und Sozialräume nicht mit verschmutzter Einsatzkleidung betreten; Schwarz/Weiß-Trennung beachten', 'score': 1},
+        {'text': 'Im Gerätehaus Aufenthalts- und Sozialräume nicht mit verschmutzter Einsatzkleidung betreten, Schwarz/Weiß-Trennung beachten', 'score': 1},
         {'text': 'Getränke verteilen, verschmutzte Einsatzkleidung im Spind verstauen', 'score': 0}
       ]
     },

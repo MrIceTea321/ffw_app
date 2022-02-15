@@ -35,7 +35,7 @@ class Rechtsgrundlagen {
         {'text': 'Truppführerausbildung muss abgeschlossen sein', 'score': 0},
         {
           'text':
-              'Basismodul muss abgeschlossen sein; Alter mindestens 16 Jahre; Kommandant muss zustimmen',
+              'Basismodul muss abgeschlossen sein, Alter mindestens 16 Jahre, Kommandant muss zustimmen',
           'score': 1
         },
         {
@@ -95,8 +95,8 @@ class Rechtsgrundlagen {
       'questionText':
           'Das Mindestalter für die Aufnahme in die Freiwillige Feuerwehr als gemeindliche Einrichtung beträgt?',
       'answers': [
-        {'text': '12 Jahre', 'score': 0},
-        {'text': '14 Jahre', 'score': 1},
+        {'text': '12 Jahre', 'score': 1},
+        {'text': '14 Jahre', 'score': 0},
         {'text': '16 Jahre', 'score': 0}
       ]
     },
@@ -104,9 +104,9 @@ class Rechtsgrundlagen {
       'questionText':
           'Bei welchem Versicherungsträger sind Feuerwehrdienstleistende gegen Körperschäden versichert?',
       'answers': [
-        {'text': 'Berufsgenossenschaft Glas- und Keramik', 'score': 1},
+        {'text': 'Berufsgenossenschaft Glas- und Keramik', 'score': 0},
         {'text': 'Haftpflichtversicherung der Gemeinde', 'score': 0},
-        {'text': 'Kommunale Unfallversicherung Bayern', 'score': 0}
+        {'text': 'Kommunale Unfallversicherung Bayern', 'score': 1}
       ]
     },
     {
@@ -123,7 +123,7 @@ class Rechtsgrundlagen {
     },
     {
       'questionText':
-          ' Welche Arten von Feuerwehren nennt das Bayerische Feuerwehrgesetz?',
+          'Welche Arten von Feuerwehren nennt das Bayerische Feuerwehrgesetz?',
       'answers': [
         {
           'text': 'Bundesbahnfeuerwehr, Freiwillige Feuerwehr, Berufsfeuerwehr',
@@ -146,7 +146,7 @@ class Rechtsgrundlagen {
       'answers': [
         {
           'text':
-              'Lohnfortzahlung durch Arbeitgeber; Versicherungsschutz bei Personen- und Sachschäden; Freistellung bei Einsätzen',
+              'Lohnfortzahlung durch Arbeitgeber, Versicherungsschutz bei Personen- und Sachschäden, Freistellung bei Einsätzen',
           'score': 1
         },
         {'text': 'Teilnahme am Dienst nur dann, wenn er Zeit hat', 'score': 0},
