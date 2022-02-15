@@ -158,9 +158,9 @@ class _QuizState extends State<Quiz> {
                             hasImage
                                 ? Padding(
                                     padding: EdgeInsets.fromLTRB(
-                                        size.width * 0.81,
+                                        size.width * 0.4,
                                         size.height * 0.28,
-                                        5.0,
+                                        size.width * 0.4,
                                         0.0),
                                     child: Container(
                                       alignment: Alignment.center,
@@ -197,7 +197,7 @@ class _QuizState extends State<Quiz> {
                                           );
                                         },
                                         child: const Icon(
-                                          Icons.image_outlined,
+                                          Icons.image_search_outlined,
                                           size: 45,
                                           color: white,
                                         ),
