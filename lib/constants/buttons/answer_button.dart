@@ -35,10 +35,10 @@ class AnswerButton extends StatelessWidget {
                 textAlign: TextAlign.center,
                 style: const TextStyle(
                   color: Colors.black,
-                  fontWeight: FontWeight.bold,
                   fontSize: 18.0
                 ),
                 maxLines: 5,
+                minFontSize: 10,
                 stepGranularity: 2.0,
               ),
             ),

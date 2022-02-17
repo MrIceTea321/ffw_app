@@ -31,6 +31,9 @@ class _QuizState extends State<Quiz> {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
+    double iconSize = size.width * 0.12;
+    double containerSize = iconSize + 20.0;
+
     return Container(
         decoration: shaderDecoration,
         child: questionIndex < widget.questions.length
@@ -66,7 +69,7 @@ class _QuizState extends State<Quiz> {
                                         width: size.width * 0.9,
                                         child: Padding(
                                           padding: const EdgeInsets.fromLTRB(
-                                              10.0, 15.0, 10, 0.0),
+                                              10.0, 5.0, 10, 0.0),
                                           child: SizedBox(
                                             height: size.height * 0.3,
                                             width: size.width * 0.9,
@@ -78,7 +81,7 @@ class _QuizState extends State<Quiz> {
                                                   .toString(),
                                               textAlign: TextAlign.center,
                                               style: const TextStyle(
-                                                fontSize: 22,
+                                                fontSize: 18,
                                                 color: Colors.black,
                                               ),
                                               maxLines: 7,
@@ -158,14 +161,14 @@ class _QuizState extends State<Quiz> {
                             hasImage
                                 ? Padding(
                                     padding: EdgeInsets.fromLTRB(
-                                        size.width * 0.4,
-                                        size.height * 0.28,
+                                        size.width * 0.45,
+                                        size.height * 0.27,
                                         size.width * 0.4,
                                         0.0),
                                     child: Container(
                                       alignment: Alignment.center,
-                                      width: 60,
-                                      height: 60,
+                                      width: containerSize,
+                                      height: containerSize,
                                       child: TextButton(
                                         style: ButtonStyle(
                                             overlayColor:
@@ -178,7 +181,7 @@ class _QuizState extends State<Quiz> {
                                                         BorderRadius.circular(
                                                             100.0),
                                                     side: const BorderSide(
-                                                        color: white)))),
+                                                        color: Colors.transparent)))),
                                         onPressed: () {
                                           showDialog(
                                             context: context,
@@ -196,9 +199,9 @@ class _QuizState extends State<Quiz> {
                                             },
                                           );
                                         },
-                                        child: const Icon(
+                                        child: Icon(
                                           Icons.image_search_outlined,
-                                          size: 45,
+                                          size: iconSize,
                                           color: white,
                                         ),
                                       ),
@@ -237,7 +240,7 @@ class _QuizState extends State<Quiz> {
                                         width: size.width * 0.9,
                                         child: Padding(
                                           padding: const EdgeInsets.fromLTRB(
-                                              10.0, 15.0, 10.0, 0.0),
+                                              10.0, 5.0, 10.0, 0.0),
                                           child: AutoSizeText(
                                             widget.questions
                                                 .elementAt(questionIndex - 1)
@@ -246,7 +249,7 @@ class _QuizState extends State<Quiz> {
                                                 .toString(),
                                             textAlign: TextAlign.center,
                                             style: const TextStyle(
-                                              fontSize: 22,
+                                              fontSize: 18,
                                               color: Colors.black,
                                             ),
                                             maxLines: 7,
@@ -327,14 +330,14 @@ class _QuizState extends State<Quiz> {
                             hasImage
                                 ? Padding(
                                     padding: EdgeInsets.fromLTRB(
-                                        size.width * 0.4,
-                                        size.height * 0.28,
+                                        size.width * 0.45,
+                                        size.height * 0.27,
                                         size.width * 0.4,
                                         0.0),
                                     child: Container(
                                       alignment: Alignment.center,
-                                      width: 60,
-                                      height: 60,
+                                      width: containerSize,
+                                      height: containerSize,
                                       child: TextButton(
                                         style: ButtonStyle(
                                             overlayColor:
@@ -347,7 +350,7 @@ class _QuizState extends State<Quiz> {
                                                         BorderRadius.circular(
                                                             100.0),
                                                     side: const BorderSide(
-                                                        color: white)))),
+                                                        color: Colors.transparent)))),
                                         onPressed: () {
                                           showDialog(
                                             context: context,
@@ -365,9 +368,9 @@ class _QuizState extends State<Quiz> {
                                             },
                                           );
                                         },
-                                        child: const Icon(
+                                        child: Icon(
                                           Icons.image_search_outlined,
-                                          size: 45,
+                                          size: iconSize,
                                           color: white,
                                         ),
                                       ),
@@ -376,11 +379,11 @@ class _QuizState extends State<Quiz> {
                                 : const SizedBox(),
                             Padding(
                               padding: EdgeInsets.fromLTRB(size.width * 0.81,
-                                  size.height * 0.28, 5.0, 0.0),
+                                  size.height * 0.27, 5.0, 0.0),
                               child: Container(
                                 alignment: Alignment.center,
-                                width: 60,
-                                height: 60,
+                                width: containerSize,
+                                height: containerSize,
                                 child: TextButton(
                                   style: ButtonStyle(
                                       overlayColor:
@@ -391,7 +394,7 @@ class _QuizState extends State<Quiz> {
                                               borderRadius:
                                                   BorderRadius.circular(100.0),
                                               side: const BorderSide(
-                                                  color: white)))),
+                                                  color: Colors.transparent)))),
                                   onPressed: () {
                                     setState(() {
                                       showAnswer = false;
@@ -402,9 +405,9 @@ class _QuizState extends State<Quiz> {
                                       hasImage = false;
                                     });
                                   },
-                                  child: const Icon(
+                                  child: Icon(
                                     Icons.arrow_forward,
-                                    size: 45,
+                                    size: iconSize,
                                     color: white,
                                   ),
                                 ),
@@ -485,6 +488,8 @@ class _QuizState extends State<Quiz> {
       questionIndexHelperTwo = 1;
       totalScore = 0;
       showAnswer = false;
+      hasImage = false;
+      imageString = '';
     });
   }
 

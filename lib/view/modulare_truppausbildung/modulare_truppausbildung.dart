@@ -84,7 +84,7 @@ class _ModulareTruppAusbildung extends State<ModulareTruppAusbildung> {
                     builder: (BuildContext context) {
                       return AlertWithFunction(
                           title: 'Achtung',
-                          text: 'Im Prüfungsmodus erwarten dich 35 zufällige Fragen aus allen Themenbereichen. Viel Spaß ☺️',
+                          text: 'Im Prüfungsmodus erwarten dich 50 zufällige Fragen aus allen Themenbereichen. Viel Spaß ☺️',
                           buttonText: 'zur Prüfung',
                           onPressed: () {
                             Navigator.pop(context);
@@ -353,7 +353,7 @@ class _ModulareTruppAusbildung extends State<ModulareTruppAusbildung> {
 
   List<Map<String, Object>> getExamQuestions() {
     List<Map<String, Object>> examQuestionsList = [];
-    for (int i = 0; i < 35; i++) {
+    for (int i = 0; i < 50; i++) {
       int random = Random().nextInt(199);
       examQuestionsList.insert(i, widget.allQuestions.elementAt(random));
     }
