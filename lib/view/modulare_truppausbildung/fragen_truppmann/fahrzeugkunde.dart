@@ -91,13 +91,13 @@ class Fahrzeugkunde {
         {
           'text':
               'Feuerlöschkreiselpumpe Normaldruck mit einer Nennförderstreckevon 1.000 m bei einem Nennförderdruck von 10 Bar',
-          'score': 1
+          'score': 0
         },
         {'text': 'Feuerwehrpumpennorm 10, Blatt 100', 'score': 0},
         {
           'text':
               'Feuerlöschkreiselpumpe Normaldruck mit einer Nennförderleistung von 1.000 l/min bei einem Nennförderdruck von 10 Bar',
-          'score': 0
+          'score': 1
         }
       ]
     },
