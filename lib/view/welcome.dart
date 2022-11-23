@@ -3,9 +3,10 @@ import 'dart:html';
 import 'package:ffw_app/constants/buttons/standard_button.dart';
 import 'package:ffw_app/constants/colors.dart';
 import 'package:ffw_app/constants/custom_widgets/alert_with_function.dart';
-import 'package:ffw_app/view/leistungspruefung/leistungspruefung.dart';
 import 'package:ffw_app/view/modulare_truppausbildung/modulare_truppausbildung.dart';
+import 'package:ffw_app/view/pdfView.dart';
 import 'package:flutter/material.dart';
+import 'package:pdfx/pdfx.dart';
 
 class Welcome extends StatefulWidget {
   const Welcome({Key? key}) : super(key: key);
@@ -70,9 +71,9 @@ class _WelcomeState extends State<Welcome> {
               SizedBox(
                 height: size.height * 0.09,
               ),
-              /*StandardButton(
+              StandardButton(
                   color: buttonColor,
-                  text: 'Leistungsprüfung 👩‍🚒 ‍👨‍🚒',
+                  text: 'Teilnehmerunterlagen Basismodul 👩‍🚒 ‍👨‍🚒',
                   onPressed: () {
                     showDialog(
                       context: context,
@@ -80,18 +81,18 @@ class _WelcomeState extends State<Welcome> {
                         return AlertWithFunction(
                             title: 'Achtung',
                             text:
-                            'Um die App richtig nutzen zu können, halte dein Smartphone bitte immer Hochkant ☺️',
+                                'Um die App richtig nutzen zu können, halte dein Smartphone bitte immer Hochkant ☺️',
                             buttonText: 'zur Ausbildung',
                             onPressed: () {
                               Navigator.pop(context);
                               Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (_) => Leistungspruefung()));
+                                      builder: (_) => const PdfLabPage()));
                             });
                       },
                     );
-                  }),*/
+                  }),
             ],
           ),
         ),
