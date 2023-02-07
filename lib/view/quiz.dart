@@ -27,13 +27,14 @@ class _QuizState extends State<Quiz> {
   int questionIndexHelperTwo = 1;
   bool hasImage = false;
   String imageString = '';
+  bool changeToAnswerScreen = false;
 
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Container(
         decoration: shaderDecoration,
-        child: questionIndex < widget.questions.length
+        child: !changeToAnswerScreen
             ? Scaffold(
                 backgroundColor: Colors.transparent,
                 body: !showAnswer
@@ -118,7 +119,6 @@ class _QuizState extends State<Quiz> {
                                                   int score = int.parse(
                                                       answers['score']
                                                           .toString());
-
                                                   answerQuestions(score);
                                                   setState(() {
                                                     showAnswer = true;
@@ -393,14 +393,25 @@ class _QuizState extends State<Quiz> {
                                               side: const BorderSide(
                                                   color: white)))),
                                   onPressed: () {
-                                    setState(() {
-                                      showAnswer = false;
-                                      answerHelper = '';
-                                      questionIndexHelperTwo =
-                                          questionIndex + 1;
-                                      imageString = '';
-                                      hasImage = false;
-                                    });
+                                    if (questionIndexHelperTwo ==
+                                        widget.questions.length) {
+                                      setState(() {
+                                        changeToAnswerScreen = true;
+                                        questionIndex = 0;
+                                        questionIndexHelper = 1;
+                                        questionIndexHelperTwo = 1;
+                                        showAnswer = false;
+                                      });
+                                    } else {
+                                      setState(() {
+                                        showAnswer = false;
+                                        answerHelper = '';
+                                        questionIndexHelperTwo =
+                                            questionIndex + 1;
+                                        imageString = '';
+                                        hasImage = false;
+                                      });
+                                    }
                                   },
                                   child: const Icon(
                                     Icons.arrow_forward,
@@ -422,7 +433,7 @@ class _QuizState extends State<Quiz> {
                       height: size.height * 0.35,
                       child: Image.asset('images/ffwlogo.png'),
                     ),
-                    totalScore != 0
+                    totalScore >= widget.questions.length / 2
                         ? AutoSizeText(
                             '🎉 Herzlichen Glückwunsch! Du hast ' +
                                 totalScore.toString() +
@@ -485,6 +496,7 @@ class _QuizState extends State<Quiz> {
       questionIndexHelperTwo = 1;
       totalScore = 0;
       showAnswer = false;
+      changeToAnswerScreen = false;
     });
   }
 

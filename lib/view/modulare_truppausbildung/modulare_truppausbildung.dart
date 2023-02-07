@@ -1,6 +1,7 @@
 import 'dart:math';
 import 'package:ffw_app/constants/buttons/standard_button.dart';
 import 'package:ffw_app/constants/colors.dart';
+import 'package:ffw_app/view/modulare_truppausbildung/fragen_truppmann/verhalten_bei_gefahr.dart';
 import 'package:ffw_app/view/quiz.dart';
 import 'package:flutter/material.dart';
 import '../../constants/custom_widgets/alert_with_function.dart';
@@ -8,17 +9,16 @@ import 'fragen_truppmann/brennen_und_loeschen.dart';
 import 'fragen_truppmann/alternative_antriebstechniken_bei_autos.dart';
 import 'fragen_truppmann/loescheinsatz.dart';
 import 'fragen_truppmann/rechtsgrundlagen.dart';
-import 'fragen_truppmann/einsatzhygiene.dart';
 import 'fragen_truppmann/fahrzeugkunde.dart';
 import 'fragen_truppmann/funk.dart';
-import 'fragen_truppmann/gefahren_an_der_einsatzstelle.dart';
-import 'fragen_truppmann/gefahren_beim_einsatz.dart';
+import 'fragen_truppmann/verhalten_im_einsatz.dart';
 import 'fragen_truppmann/geratekunde.dart';
 import 'fragen_truppmann/hilfeleistungs_loescheinsatz.dart';
-import 'fragen_truppmann/physische_und_psychische_belastung.dart';
 import 'fragen_truppmann/sichern_und_absichern.dart';
 import 'fragen_truppmann/technische_hilfeleistung.dart';
 import 'fragen_truppmann/rettung_von_personen.dart';
+import 'fragen_truppmann/fahrzeugtechnik.dart';
+import 'fragen_truppmann/abc.dart';
 
 class ModulareTruppAusbildung extends StatefulWidget {
   ModulareTruppAusbildung({Key? key}) : super(key: key);
@@ -84,7 +84,8 @@ class _ModulareTruppAusbildung extends State<ModulareTruppAusbildung> {
                     builder: (BuildContext context) {
                       return AlertWithFunction(
                           title: 'Achtung',
-                          text: 'Im Prüfungsmodus erwarten dich 35 zufällige Fragen aus allen Themenbereichen. Viel Spaß ☺️',
+                          text:
+                              'Im Prüfungsmodus erwarten dich 50 zufällige Fragen aus allen Themenbereichen. Viel Spaß ☺️',
                           buttonText: 'zur Prüfung',
                           onPressed: () {
                             Navigator.pop(context);
@@ -92,13 +93,12 @@ class _ModulareTruppAusbildung extends State<ModulareTruppAusbildung> {
                                 context,
                                 MaterialPageRoute(
                                     builder: (_) => Quiz(
-                                      questions: widget.examQuestions,
-                                      themengebiet: 'Prüfung',
-                                    )));
+                                          questions: widget.examQuestions,
+                                          themengebiet: 'Prüfung',
+                                        )));
                           });
                     },
                   );
-
                 }),
             SizedBox(
               height: size.height * 0.02,
@@ -185,20 +185,6 @@ class _ModulareTruppAusbildung extends State<ModulareTruppAusbildung> {
               height: size.height * 0.02,
             ),
             StandardButton(
-                text: 'Einsatzhygiene',
-                color: buttonColor,
-                onPressed: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (_) => Quiz(
-                              questions: Einsatzhygiene.fragenEinsatzhygiene,
-                              themengebiet: Einsatzhygiene.themengebiet)));
-                }),
-            SizedBox(
-              height: size.height * 0.02,
-            ),
-            StandardButton(
                 text: 'Fahrzeugkunde',
                 color: buttonColor,
                 onPressed: () {
@@ -227,23 +213,7 @@ class _ModulareTruppAusbildung extends State<ModulareTruppAusbildung> {
               height: size.height * 0.02,
             ),
             StandardButton(
-                text: 'Gefahren Einsatzstelle',
-                color: buttonColor,
-                onPressed: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (_) => Quiz(
-                              questions: GefahrenAnDerEinsatzstelle
-                                  .fragenGefahrenAnDerEinsatzstelle,
-                              themengebiet:
-                                  GefahrenAnDerEinsatzstelle.themengebiet)));
-                }),
-            SizedBox(
-              height: size.height * 0.02,
-            ),
-            StandardButton(
-                text: 'Gefahren Einsatz',
+                text: 'Verhalten bei Gefahr',
                 color: buttonColor,
                 onPressed: () {
                   Navigator.push(
@@ -251,8 +221,8 @@ class _ModulareTruppAusbildung extends State<ModulareTruppAusbildung> {
                       MaterialPageRoute(
                           builder: (_) => Quiz(
                               questions:
-                                  GefahrenBeimEinsatz.fragenGefahrenBeimEinsatz,
-                              themengebiet: GefahrenBeimEinsatz.themengebiet)));
+                                  VerhaltenBeiGefahr.fragenVerhaltenBeiGefahr,
+                              themengebiet: VerhaltenBeiGefahr.themengebiet)));
                 }),
             SizedBox(
               height: size.height * 0.02,
@@ -286,23 +256,22 @@ class _ModulareTruppAusbildung extends State<ModulareTruppAusbildung> {
               height: size.height * 0.02,
             ),
             StandardButton(
-                text: 'Menschliche Belastung',
+                text: 'Verhalten im Einsatz',
                 color: buttonColor,
                 onPressed: () {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
                           builder: (_) => Quiz(
-                              questions: Physische_PsychischeBelastung
-                                  .fragenPhysische_PsychischeBelastung,
-                              themengebiet:
-                                  Physische_PsychischeBelastung.themengebiet)));
+                              questions:
+                                  VerhaltenImEinsatz.fragenVerhaltenImEinsatz,
+                              themengebiet: VerhaltenImEinsatz.themengebiet)));
                 }),
             SizedBox(
               height: size.height * 0.02,
             ),
             StandardButton(
-                text: 'Rettung von Personen',
+                text: 'Erste Hilfe',
                 color: buttonColor,
                 onPressed: () {
                   Navigator.push(
@@ -317,7 +286,7 @@ class _ModulareTruppAusbildung extends State<ModulareTruppAusbildung> {
               height: size.height * 0.02,
             ),
             StandardButton(
-                text: 'Sichern und Absichern',
+                text: 'Sichern gegen Absturz',
                 color: buttonColor,
                 onPressed: () {
                   Navigator.push(
@@ -345,6 +314,34 @@ class _ModulareTruppAusbildung extends State<ModulareTruppAusbildung> {
             SizedBox(
               height: size.height * 0.02,
             ),
+            StandardButton(
+                text: 'Fahrzeugtechnik',
+                color: buttonColor,
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (_) => Quiz(
+                              questions: Fahrzeugtechnik.fragenFahrzeugtechnik,
+                              themengebiet: Fahrzeugtechnik.themengebiet)));
+                }),
+            SizedBox(
+              height: size.height * 0.02,
+            ),
+            StandardButton(
+                text: 'Abc Einsatz',
+                color: buttonColor,
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (_) => Quiz(
+                              questions: AbcEinsatz.fragenPhysische_AbcEinsatz,
+                              themengebiet: AbcEinsatz.themengebiet)));
+                }),
+            SizedBox(
+              height: size.height * 0.02,
+            ),
           ],
         ),
       ),
@@ -353,7 +350,7 @@ class _ModulareTruppAusbildung extends State<ModulareTruppAusbildung> {
 
   List<Map<String, Object>> getExamQuestions() {
     List<Map<String, Object>> examQuestionsList = [];
-    for (int i = 0; i < 35; i++) {
+    for (int i = 0; i < 50; i++) {
       int random = Random().nextInt(199);
       examQuestionsList.insert(i, widget.allQuestions.elementAt(random));
     }
@@ -364,20 +361,18 @@ class _ModulareTruppAusbildung extends State<ModulareTruppAusbildung> {
     widget.allQuestions.addAll(AlternativeAntriebstechnikenBeiAutos
         .fragenalternativeAntriebstechnikenBeiAutos);
     widget.allQuestions.addAll(BrennenUndLoeschen.fragenBrennenUndLoeschen);
-    widget.allQuestions.addAll(Einsatzhygiene.fragenEinsatzhygiene);
     widget.allQuestions.addAll(Fahrzeugkunde.fragenFahrzeugkunde);
     widget.allQuestions.addAll(Funk.fragenFunk);
-    widget.allQuestions
-        .addAll(GefahrenAnDerEinsatzstelle.fragenGefahrenAnDerEinsatzstelle);
-    widget.allQuestions.addAll(GefahrenBeimEinsatz.fragenGefahrenBeimEinsatz);
+    widget.allQuestions.addAll(VerhaltenBeiGefahr.fragenVerhaltenBeiGefahr);
     widget.allQuestions.addAll(Geraetekunde.fragenGeraetekunde);
     widget.allQuestions
         .addAll(HilfeleistungsLoescheinsatz.fragenHilfeleistungsLoescheinsatz);
     widget.allQuestions.addAll(Loescheinsatz.fragenLoescheinsatz);
-    widget.allQuestions.addAll(
-        Physische_PsychischeBelastung.fragenPhysische_PsychischeBelastung);
+    widget.allQuestions.addAll(VerhaltenImEinsatz.fragenVerhaltenImEinsatz);
     widget.allQuestions.addAll(RettungVonPersonen.fragenRettungVonPersonen);
     widget.allQuestions.addAll(SichernUndAbsichern.fragenSichernUndAbsichern);
     widget.allQuestions.addAll(THL.fragenTHL);
+    widget.allQuestions.addAll(Fahrzeugtechnik.fragenFahrzeugtechnik);
+    widget.allQuestions.addAll(AbcEinsatz.fragenPhysische_AbcEinsatz);
   }
 }

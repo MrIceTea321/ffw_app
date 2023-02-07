@@ -20,6 +20,14 @@ class Rechtsgrundlagen {
       ]
     },
     {
+      'questionText': 'Wer darf Personen zur Hilfeleistung verpflichten ?',
+      'answers': [
+        {'text': 'Nur der Einsatzleiter', 'score': 1},
+        {'text': 'Jeder Feuerwehrdienstleistende', 'score': 0},
+        {'text': 'Nur der Kreisbrandrat', 'score': 0}
+      ]
+    },
+    {
       'questionText':
           'Wer hat für die ordnungsgemäße Ausrüstung der Feuerwehr zu sorgen?',
       'answers': [
@@ -164,36 +172,6 @@ class Rechtsgrundlagen {
         },
         {'text': 'Keine, jeder im Trupp achtet auf sich selbst', 'score': 0},
         {'text': 'Keine, weil beide im Trupp das Gleiche tun', 'score': 0}
-      ]
-    },
-    {
-      'questionText':
-          'Die Unfallverhütungsvorschrift (UVV) - Feuerwehren hat Gültigkeit...',
-      'answers': [
-        {'text': 'bei Einhaltung der Versicherungsbedingungen', 'score': 0},
-        {'text': 'nur bei Einsätzen', 'score': 0},
-        {'text': 'bei Einsätzen, Übungen und Ausbildung', 'score': 1}
-      ]
-    },
-    {
-      'questionText':
-          'Sie bemerken als Truppführer, dass ihr Truppmann die B-Druckschläuche falsch auswirft. Bis jetzt hat er sich noch nicht verletzt. Wie handeln sie?',
-      'answers': [
-        {
-          'text':
-              'Ich muss ihn auf das fachgerechte Auswerfen hinweisen und überwachen',
-          'score': 1
-        },
-        {
-          'text':
-              'Er hat das richtige Auswerfen in seiner Ausbildung gelernt und muss nun seine Erfahrungen machen',
-          'score': 0
-        },
-        {
-          'text':
-              'Es ist ja noch nichts passiert, außerdem ist es Aufgabe des Einheitsführers etwas zu sagen',
-          'score': 0
-        }
       ]
     },
   ];

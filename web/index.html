@@ -3,10 +3,10 @@
 <head>
 
     <!-- UNCOMMENT FOR LOCAL TESTING -->
-    <!-- <base href="$FLUTTER_BASE_HREF">-->
+    <!--<base href="$FLUTTER_BASE_HREF">-->
 
      <!-- UNCOMMENT FOR PUBLISHING -->
-     <base href="https://ffw-sommerach.web.app/">
+      <base href="https://ffw-sommerach.web.app/">
 
      <meta charset="UTF-8">
      <meta content="IE=Edge" http-equiv="X-UA-Compatible">
@@ -27,6 +27,7 @@
 
     <title>ffw_sommerach_app</title>
     <link rel="manifest" href="manifest.json">
+
 </head>
 <body>
 <!-- This script installs service_worker.js to provide PWA functionality to
@@ -100,6 +101,15 @@
         loadMainDartJs();
     }
 </script>
+<script src="https://cdn.jsdelivr.net/npm/pdfjs-dist@2.12.313/build/pdf.js" type="text/javascript"></script>
+<script type="text/javascript">
+  pdfjsLib.GlobalWorkerOptions.workerSrc = "https://cdn.jsdelivr.net/npm/pdfjs-dist@2.12.313/build/pdf.worker.min.js";
+  pdfRenderOptions = {
+    cMapUrl: 'https://cdn.jsdelivr.net/npm/pdfjs-dist@2.12.313/cmaps/',
+    cMapPacked: true,
+  }
+</script>
+<script src="main.dart.js" type="application/javascript"></script>
 <!-- The core Firebase JS SDK is always required and must be listed first -->
 <script src="https://www.gstatic.com/firebasejs/9.6.6/firebase-app.js"></script>
 <!-- TODO: Add SDKs for Firebase products that you want to use
