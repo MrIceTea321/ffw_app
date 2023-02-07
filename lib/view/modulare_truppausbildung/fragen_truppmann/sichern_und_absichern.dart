@@ -1,5 +1,5 @@
 class SichernUndAbsichern {
-  static const String themengebiet = "Sichern und Absichern";
+  static const String themengebiet = "Sichern gegen Absturz";
 
   static final fragenSichernUndAbsichern = [
     {

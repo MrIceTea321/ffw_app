@@ -153,7 +153,7 @@ class Fahrzeugkunde {
       'answers': [
         {'text': 'GW-L 1, TSF, RW', 'score': 0},
         {'text': 'DLK, WLF, ELW 1', 'score': 0},
-        {'text': 'LF 10, HLF 10, LF 20l', 'score': 1}
+        {'text': 'LF 10, HLF 10, LF 20', 'score': 1}
       ]
     },
     {

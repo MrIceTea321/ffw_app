@@ -73,7 +73,7 @@ class _WelcomeState extends State<Welcome> {
               ),
               StandardButton(
                   color: buttonColor,
-                  text: 'Teilnehmerunterlagen Basismodul 👩‍🚒 ‍👨‍🚒',
+                  text: 'Teilnehmerunterlagen Basismodul 📄',
                   onPressed: () {
                     showDialog(
                       context: context,

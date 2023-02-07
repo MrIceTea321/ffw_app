@@ -1,19 +1,22 @@
-class AlternativeAntriebstechnikenBeiAutos {
-  static const String themengebiet = "Alternative Antriebstechniken\nbei Autos";
+class Fahrzeugtechnik {
+  static const String themengebiet = "Fahrzeugtechnik";
 
-  static final List<Map<String, Object>>
-      fragenalternativeAntriebstechnikenBeiAutos = [
+  static final fragenFahrzeugtechnik = [
     {
       'questionText':
-          'Welche Erkennungsmöglichkeit von außen besteht bei einem Fahrzeug, das mit Flüssiggas betrieben wird?',
+          'Welche besonderen Maßnahmen sind an einem verunfallten gasbetriebenen PKW (LPG oder CNG) erforderlich?',
       'answers': [
-        {'text': 'Von außen nicht erkennbar', 'score': 0},
+        {'text': 'Es sind keine besonderen Maßnahmen erforderlich', 'score': 0},
         {
           'text':
-              'Mögliche Fahrzeugbeschriftung, z. B. LPG, BiFuel, Flüssiggas, Autogas',
+              'Gefahrenbereich weiträumig sperren; Motor abstellen; Gasabsperrventil schließen',
           'score': 1
         },
-        {'text': 'Durch rechteckigen Tankdeckel am Einfüllstutzen', 'score': 0}
+        {
+          'text':
+              'PKW gegen Wegrollen sichern, Batterie abklemmen, Brandschutz mit Kübelspritze sicherstellen',
+          'score': 0
+        }
       ]
     },
     {
@@ -44,19 +47,15 @@ class AlternativeAntriebstechnikenBeiAutos {
     },
     {
       'questionText':
-          'Welche besonderen Maßnahmen sind an einem verunfallten gasbetriebenen PKW (LPG oder CNG) erforderlich?',
+          'Welche Erkennungsmöglichkeit von außen besteht bei einem Fahrzeug, das mit Flüssiggas betrieben wird?',
       'answers': [
-        {'text': 'Es sind keine besonderen Maßnahmen erforderlich', 'score': 0},
+        {'text': 'Von außen nicht erkennbar', 'score': 0},
         {
           'text':
-              'Gefahrenbereich weiträumig sperren, Motor abstellen; Gasabsperrventil schließen',
+              'Mögliche Fahrzeugbeschriftung, z. B. LPG, BiFuel, Flüssiggas, Autogas',
           'score': 1
         },
-        {
-          'text':
-              'PKW gegen Wegrollen sichern, Batterie abklemmen, Brandschutz mit Kübelspritze sicherstellen',
-          'score': 0
-        }
+        {'text': 'Durch rechteckigen Tankdeckel am Einfüllstutzen', 'score': 0}
       ]
     },
   ];

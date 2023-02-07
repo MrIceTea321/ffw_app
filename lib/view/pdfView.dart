@@ -1,3 +1,4 @@
+import 'package:ffw_app/constants/colors.dart';
 import 'package:pdfx/pdfx.dart';
 import 'package:flutter/material.dart';
 
@@ -40,25 +41,46 @@ class _PdfLabPageState extends State<PdfLabPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      bottomNavigationBar: BottomAppBar(
+        shape: const CircularNotchedRectangle(),
+        child: SizedBox(
+          height: 50,
+          child: Row(
+            mainAxisSize: MainAxisSize.max,
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: <Widget>[
+              IconButton(
+                iconSize: 40.0,
+                padding: const EdgeInsets.only(left: 28.0),
+                icon: const Icon(
+                  Icons.arrow_back_outlined,
+                  color: darkBlue,
+                ),
+                onPressed: () {
+                  pdfController.previousPage(
+                      duration: const Duration(milliseconds: 250),
+                      curve: Curves.easeIn);
+                },
+              ),
+              IconButton(
+                iconSize: 40.0,
+                padding: const EdgeInsets.only(right: 28.0),
+                icon: const Icon(
+                  Icons.arrow_forward_outlined,
+                  color: darkBlue,
+                ),
+                onPressed: () {
+                  pdfController.nextPage(
+                      duration: const Duration(milliseconds: 250),
+                      curve: Curves.easeIn);
+                },
+              ),
+            ],
+          ),
+        ),
+      ),
       body: Center(
         child: pdfView(),
-      ),
-      floatingActionButton: Column(
-        mainAxisAlignment: MainAxisAlignment.end,
-        children: <Widget>[
-          FloatingActionButton(
-            child: const Icon(Icons.first_page_outlined),
-            onPressed: () => pdfController.previousPage(
-                duration: const Duration(milliseconds: 250),
-                curve: Curves.easeIn),
-          ),
-          FloatingActionButton(
-            child: const Icon(Icons.last_page_outlined),
-            onPressed: () => pdfController.nextPage(
-                duration: const Duration(milliseconds: 250),
-                curve: Curves.easeIn),
-          ),
-        ],
       ),
     );
   }
